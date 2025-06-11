@@ -40,7 +40,11 @@ body {
     border: 4px double rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(50,30,10,0.25);
+    transition: box-shadow 0.32s cubic-bezier(0.4,0,0.2,1);
+}
 
+.Name:hover {
+    box-shadow: 0 6px 24px 4px rgba(109, 95, 77, 0.637), 0 6px 12px rgba(50,30,10,0.25);
 }
 
 .arrow {
@@ -48,6 +52,11 @@ body {
     left: 45%;
     top: 80%;
     padding: 5px;
+    transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+}
+
+.arrow:hover {
+    transform: scale(1.07);
 }
 
 .content {
