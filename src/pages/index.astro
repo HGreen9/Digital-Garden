@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Svg from "../components/Svg.astro";
 import Name from "../components/Name.astro";
+import Content from "../components/Content.astro";
 ---
 
 <html lang="en">
@@ -10,11 +11,13 @@ import Name from "../components/Name.astro";
 
   <body>
 
-    <img class="bg" src="/Assets/texture.png" alt="BG">
-
     <Svg />
 
+    <canvas id="grainCanvas"></canvas>
+
     <Name />
+
+    <Content />
 
   </body>
 </html>

@@ -1,10 +1,19 @@
 body {
-    background-color: #C5AF93;
+    background-color: #dec5a5;
+    overflow-x: hidden;
+
 }
 
-.bg {
-    position: fixed;
+
+#grainCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none; 
+  z-index: 9999;
+  mix-blend-mode: multiply;
 }
+
 
 .Leaf1 {
     position: fixed;
@@ -30,4 +39,12 @@ body {
     padding: 15px;
     border: 4px double rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 90%; /* adjust as needed */
+    transform: translateX(-50%);
+    z-index: 2; /* ensure it's above background elements */
 }
