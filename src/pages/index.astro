@@ -3,13 +3,25 @@ import Header from "../components/Header.astro";
 import Svg from "../components/Svg.astro";
 import Name from "../components/Name.astro";
 import Content from "../components/Content.astro";
+import MusicPlayer from "../components/MusicPlayer.astro";
+
+const song = {
+  name: "Calm Piano Music",
+  artist: "Clavier Music",
+  album: "Modern Classical",
+  url: "/assets/calm-piano-music.mp3",
+  cover_art_url: "/assets/calm-piano-music-cover.png",
+};
 ---
+
 
 <html lang="en">
 
     <Header />
 
   <body>
+
+    <MusicPlayer {...song} />
 
     <Svg />
 

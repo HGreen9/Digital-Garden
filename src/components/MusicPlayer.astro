@@ -1,0 +1,98 @@
+---
+// MusicPlayer.astro
+const {
+  name,
+  artist,
+  album,
+  url,
+  cover_art_url,
+} = Astro.props;
+---
+<div class="music-player">
+  <audio
+    id="audio-player"
+    controls
+    preload="metadata"
+  >
+    <source src={url} type="audio/mpeg" />
+    Your browser doesn’t support <code>audio</code>.
+  </audio>
+
+  <div class="track-info">
+    <img
+      class="cover"
+      src={cover_art_url}
+      alt={`${name} album art`}
+      width="80"
+      height="80"
+    />
+    <div>
+      <h3 class="title">{name}</h3>
+      <p class="meta">{artist} &ndash; {album}</p>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  // Wait for Plyr to load and then enhance the <audio>
+  document.addEventListener('DOMContentLoaded', () => {
+    // global Plyr should be available from the CDN script
+    const player = new Plyr('#audio-player', {
+      controls: [
+        'play-large', // Show the big play button
+        'play', 'progress', 'current-time',
+        'mute', 'volume',
+        'settings', 'pip', 'airplay'
+      ],
+      settings: ['quality', 'speed', 'loop']
+    });
+  });
+</script>
+
+<style>
+  .music-player {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--plyr-control-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(50,30,10,0.15);
+
+  }
+
+  .track-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cover {
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--plyr-control-color);
+  }
+
+  .meta {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+
+.music-player::before {
+  content: "";
+  position: absolute;
+  top: 1rem; right: 1rem;
+  width: 3.5rem; height: 3.5rem; /* slightly larger */
+  background: url(/public/assets/leaf-silhouette.svg) no-repeat center;
+  background-size: contain; /* show whole SVG, not cropped */
+  opacity: 0.28; /* more visible */
+  pointer-events: none;
+}
+</style>

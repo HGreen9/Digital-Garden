@@ -1,10 +1,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>My Digital Garden</title>
+
+<!-- Plyr stylesheet -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.plyr.io/3.7.8/plyr.css"
+  />
+
+  <!-- Optional: override default colors to match your earthy, bronze-y palette -->
+  <style>
+    :root {
+      --plyr-color-main: #8b5e3c;      /* warm bronze */
+      --plyr-control-background: #e3dcd1; /* soft off-white */
+      --plyr-control-color: #333;      /* dark text/icons */
+    }
+  </style>
+
+  <!-- Plyr script (deferred so it won’t block rendering) -->
+  <script
+    defer
+    src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"
+  ></script>
 
     <link rel="stylesheet" href="/styles.css">
     <script src="script.js" defer></script>
+    
 
 <!-- <link rel="icon" href="/Assets/favicons/favicon.ico" sizes="32x32">
  <link rel="icon" href="/Assets/favicons/favicon.svg" type="image/svg+xml">
