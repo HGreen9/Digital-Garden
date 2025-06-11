@@ -1,0 +1,16 @@
+body {
+    margin: 15px;
+    background-color: antiquewhite;
+}
+
+.Leaf1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.Leaf2 {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
