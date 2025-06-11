@@ -41,7 +41,7 @@
   position: absolute;
   top: 1rem; right: 1rem;
   width: 3rem; height: 3rem;
-  background: url(/public/leaf-silhouette.svg) no-repeat center;
+  background: url(/public/assets/leaf-silhouette.svg) no-repeat center;
   opacity: 0.12;
 }
 
@@ -51,7 +51,7 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: url("/public/Noise.svg") repeat;
+  background: url("/public/assets/Noise.svg") repeat;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-out;
@@ -65,7 +65,7 @@
   box-shadow: 0 6px 12px rgba(50,30,10,0.25);
 
   /* age-toning via filters */
-  filter: sepia(40%) contrast(1.1) brightness(0.95);
+  filter: sepia(10%) contrast(1.1) brightness(0.95);
 }
 
 .card:hover::after {

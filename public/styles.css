@@ -36,15 +36,24 @@ body {
     transform: translate(-50%, -50%) scale(0.5);
     z-index: 1;
     background-color: rgba(250, 235, 215, 0.575);
-    padding: 15px;
+    padding: 60px;
     border: 4px double rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(50,30,10,0.25);
+
+}
+
+.arrow {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    padding: 5px;
 }
 
 .content {
     position: absolute;
     left: 50%;
-    top: 90%; /* adjust as needed */
+    top: 110%; /* adjust as needed */
     transform: translateX(-50%);
     z-index: 2; /* ensure it's above background elements */
 }
