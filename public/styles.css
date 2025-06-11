@@ -66,3 +66,26 @@ body {
     transform: translateX(-50%);
     z-index: 2; /* ensure it's above background elements */
 }
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10000;
+    transition: opacity 0.32s, transform 0.2s;
+}
+
+.back-to-top.visible {
+    opacity: 0.7;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}

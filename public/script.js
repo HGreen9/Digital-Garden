@@ -29,3 +29,13 @@
 
   drawGrain();
 })();
+
+window.addEventListener('scroll', function() {
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+  if (window.scrollY > 200) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});

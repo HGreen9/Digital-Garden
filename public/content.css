@@ -40,9 +40,11 @@
   content: "";
   position: absolute;
   top: 1rem; right: 1rem;
-  width: 3rem; height: 3rem;
+  width: 3.5rem; height: 3.5rem; /* slightly larger */
   background: url(/public/assets/leaf-silhouette.svg) no-repeat center;
-  opacity: 0.12;
+  background-size: contain; /* show whole SVG, not cropped */
+  opacity: 0.28; /* more visible */
+  pointer-events: none;
 }
 
 /* Optional: subtle grain overlay if you have a tiny “grain.png” */
