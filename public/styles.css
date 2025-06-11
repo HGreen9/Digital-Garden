@@ -1,5 +1,9 @@
 body {
-    background-color: rgb(224, 213, 199);
+    background-color: #C5AF93;
+}
+
+.bg {
+    position: fixed;
 }
 
 .Leaf1 {
